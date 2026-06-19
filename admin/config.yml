@@ -1,17 +1,17 @@
 backend:
   name: github
-  repo: your-username/your-repo-name
+  repo: luxxpert/luxxpert.github.io # اسم حسابك/المستودع
+  branch: main # أو master حسب الفرع الأساسي عندك
+  base_url: https://api.github.com # هذا السطر يربطك مباشرة بـ GitHub
 
 media_folder: "assets"
-public_folder: "/assets"
+public_folder: "assets"
 
 collections:
   - name: "blog"
-    label: "المقالات"
-    folder: "_posts"
+    label: "Blog"
+    folder: "blog"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "العنوان", name: "title", widget: "string"}
-      - {label: "تاريخ النشر", name: "date", widget: "datetime"}
-      - {label: "المحتوى", name: "body", widget: "markdown"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
