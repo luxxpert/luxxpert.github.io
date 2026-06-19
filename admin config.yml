@@ -6,6 +6,16 @@ media_folder: "assets"
 public_folder: "/assets"
 
 collections:
+- name: "map_data"
+    label: "بيانات الخريطة"
+    folder: "data/map"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "المحافظة", name: "province", widget: "string"}
+      - {label: "عدد الأشجار", name: "tree_count", widget: "number"}
+      - {label: "الحالة", name: "status", widget: "select", options: ["تم الزراعة", "تحت المراقبة"]}
+      - {label: "تاريخ الزراعة", name: "date", widget: "datetime"}
   - name: "blog"
     label: "المقالات"
     folder: "_posts"
